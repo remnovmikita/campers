@@ -1,0 +1,80 @@
+.wrapper{
+    padding: 24px;
+    display: flex;
+
+    border-radius: 16px;
+    width: 888px;
+    height: 312px;
+    gap: 24px;
+}
+.section{
+    width: 1440px;
+}
+.MainWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.coverImage{
+border-radius: 16px;
+width: 219px;
+height: 240px;
+}
+.mainInfo{
+font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #101828;
+}
+.wrapperMainInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 524px;
+    margin-bottom: 8px;
+    
+}
+.afterMain{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.description{
+    margin-bottom: 24px;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #475467;
+}
+.afterDescr{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.afterDescrText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 18px;
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: #101828;
+    
+}
+.button{
+    border-radius: 200px;
+padding: 16px 60px;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.01em;
+color: #fff;
+background: #829b91;
+}
+.icon{
+    margin-right: 8px;
+}

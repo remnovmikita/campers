@@ -1,0 +1,23 @@
+
+.container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+    padding: 24px 64px;
+}
+.nav{
+    display:flex;
+    gap:32px;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    margin-right: 450px
+}
+.check{
+    color: #829b91;
+}
+.normal{
+    color: #101828;
+}
