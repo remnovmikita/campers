@@ -1,0 +1,99 @@
+.wrapperGlobal {
+  display: flex;
+  gap: 24px;
+}
+
+/* Photo */
+
+.thrumbPhotos {
+  display: flex;
+  gap: 32px;
+}
+.thrumbPhotos {
+  border-radius: 16px;
+}
+
+.thrumbPhotos li {
+  border-radius: 16px;
+}
+.thrumbPhotos button {
+  display: block;
+}
+.mainImage {
+  border-radius: 17px;
+  margin-bottom: 27px;
+}
+.active {
+  border: 3px solid #829b91;
+}
+.mainPhoto {
+  width: 638px;
+}
+
+/* Info */
+
+.info h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+  margin-bottom: 8px;
+}
+.star {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.star p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}
+.prise{
+    font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #101828;
+margin-bottom: 24px;
+}
+.description{
+    font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #475467;
+}
+.BlockInfo{
+    padding: 24px;
+}
+.details{
+    font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #101828;
+margin-bottom: 16px;
+}
+.detalisList{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.divider::after{
+content: "";
+border: 1px solid #dadde1;
+width: 602px;
+height: 0px;
+}
+.detalisPosition{
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+text-align: center;
+color: #101828;
+padding: 12px 18px;
+}
+.specs {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+}

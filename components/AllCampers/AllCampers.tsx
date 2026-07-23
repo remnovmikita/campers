@@ -8,6 +8,7 @@ import Petrol from "@/public/Petrol.svg"
 import Automatic from "@/public/Automatic.svg"
 import Alcove from "@/public/Alcove.svg"
 import css from "./AllCampers.module.css"
+import Link from "next/link"
 
 export default function AllCampers({ campers }: { campers: AllCampersResponse }) {
   return (
@@ -37,7 +38,7 @@ export default function AllCampers({ campers }: { campers: AllCampersResponse })
               <p className={css.afterDescrText}><Image className={css.icon} src={Automatic} alt="Automatic" width={20} height={15} /> Automatic</p>
               <p className={css.afterDescrText}><Image className={css.icon} src={Alcove} alt="Alcove" width={15} height={13} /> Alcove</p>
             </li>
-            <button className={css.button}>Show more</button>
+            <Link href={`/catalog/${info.id}`} className={css.button}>Show more</Link>
           </ul>
         </li>
       ))}
