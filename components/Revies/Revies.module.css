@@ -1,0 +1,147 @@
+.globalReviews{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 623px;
+}
+.h4{
+    font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #101828;
+margin-bottom: 24px;
+}
+.blockRevie{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 16px ;
+    width: 623px;
+    gap: 16px;
+}
+.blockRevie p{
+    font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #475467;
+}
+.provile{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+.avatar{
+    font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #829b91;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 60px;
+width: 60px;
+height: 60px;
+}
+.nameRating{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 4px;
+    flex-direction: column;
+}
+.reviewer_name{
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: #101828;
+}
+.empty{
+    fill: #dadde1;
+}
+.forms{
+    display: flex;
+    gap: 48px;
+}
+.wrapperForm{
+    padding: 44px;
+    width: 641px;
+}
+.formMain{
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+.formh4{
+    font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+color: #101828;
+margin-bottom: 8px;
+}
+.formh4P{
+    font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #6c717b;
+margin-bottom: 24px;
+}
+.form_group{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.form_group label{
+    position: absolute;
+  left: 12px;
+  top: -9px;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33333;
+
+border-radius: 8px;
+padding: 0px 8px;
+width: 51px;
+height: 16px;
+background-color: #dadde1;
+}
+.error {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 14px;
+  color: #e44848;
+}
+.formMain input{
+border: 1px solid;
+border-radius: 12px;
+padding: 18px 0px 18px 18px;
+width: 527px;
+height: 60px;
+
+}
+.btn_send{
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.01em;
+color: #fff;
+text-align: center;
+border-radius: 200px;
+padding: 16px 243px;
+
+background: #829b91;
+}
+
+.inputError {
+border-color:#e44848;
+background: #ffdfdf;
+}
+
+.labelError {
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33333;
+color: #ec383b;
+background: #ffdfdf;
+}

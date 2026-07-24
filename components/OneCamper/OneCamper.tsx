@@ -5,9 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Star from "@/public/Star.svg";
 import Map from "@/public/Map.svg";
-import Petrol from "@/public/Petrol.svg";
-import Automatic from "@/public/Automatic.svg";
-import Alcove from "@/public/Alcove.svg";
+
 
 export default function OneCamper({ camper }: { camper: Camper }) {
   const [mainImage, setMainImage] = useState(camper.gallery[0].original);
@@ -71,28 +69,28 @@ export default function OneCamper({ camper }: { camper: Camper }) {
               <table className={css.specs}>
                 <tbody>
                   <tr>
-                    <td>Form</td>
-                    <td>{camper.form}</td>
+                    <td className={css.first}>Form</td>
+                    <td className={css.second}> {camper.form.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())}</td>
                   </tr>
                   <tr>
-                    <td>Length</td>
-                    <td>{camper.length} m</td>
+                    <td className={css.first}>Length</td>
+                    <td className={css.second}>{camper.length}</td>
                   </tr>
                   <tr>
-                    <td>Width</td>
-                    <td>{camper.width} m</td>
+                    <td className={css.first}>Width</td>
+                    <td className={css.second}>{camper.width}</td>
                   </tr>
                   <tr>
-                    <td>Height</td>
-                    <td>{camper.height} m</td>
+                    <td className={css.first}>Height</td>
+                    <td className={css.second}>{camper.height}</td>
                   </tr>
                   <tr>
-                    <td>Tank</td>
-                    <td>{camper.tank} l</td>
+                    <td className={css.first}>Tank</td>
+                    <td className={css.second}>{camper.tank}</td>
                   </tr>
                   <tr>
-                    <td>Consumption</td>
-                    <td>{camper.consumption} l / 100 km</td>
+                    <td className={css.first}>Consumption</td>
+                    <td className={css.second}>{camper.consumption}</td>
                   </tr>
                 </tbody>
               </table>

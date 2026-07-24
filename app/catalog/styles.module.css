@@ -6,3 +6,11 @@
     gap: 65px;
     padding-bottom: 52px;
 }
+.sectionRevies{
+        margin-top: 48px;
+    padding: 0px 64px;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+}

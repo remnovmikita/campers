@@ -1,6 +1,7 @@
 import OneCamper from "@/components/OneCamper/OneCamper";
-import { GetOneCamper } from "@/lib/api/api";
-
+import Revies from "@/components/Revies/Revies";
+import { GetOneCamper, getReviesbyId } from "@/lib/api/api";
+import css from "../styles.module.css"
 
 type PropsCampersId = {
     params: Promise<{campersId: string}>;
@@ -9,8 +10,14 @@ type PropsCampersId = {
 export default async function CamperById(props: PropsCampersId){
     const params = await props.params;
     const res = await GetOneCamper(params.campersId);
-    console.log(res)
+    const reviews = await getReviesbyId(params.campersId)
+    
     return(
-        <OneCamper camper={res.data}/>
+        <section className={css.sectionRevies}>
+            <OneCamper camper={res.data}/>
+            <div>
+                <Revies reviews={reviews} camperId={params.campersId}/>
+            </div>
+        </section>
     )
 }
