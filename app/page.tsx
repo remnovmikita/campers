@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import styles from "./page.module.css";
 
 
@@ -8,7 +9,7 @@ export default function Home() {
    <div className={styles.container}>
    <h1 className={styles.h1}>Campers of your dreams</h1>
    <p className={styles.p}>You can find everything you want in our catalog</p>
-   <button className={styles.button}>View Now</button>
+   <Link href="/catalog" className={styles.button}>View Now</Link>
    </div>
    </section>
   );

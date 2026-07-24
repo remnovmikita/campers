@@ -25,6 +25,7 @@ export type Camper = {
   width: string,
   height: string,
   tank: string,
+  coverImage:string,
   consumption: string,
   transmission: string,
   engine: string,
@@ -44,9 +45,14 @@ export type Camper = {
 
 
 export type AllCampersResponse = {
-     page: number,
+  page: number,
   perPage: number,
   total: number,
   totalPages: number,
   campers: Camper[]
+}
+export type Filters ={
+  engines:string[],
+  transmissions:string[],
+  forms:string[],
 }

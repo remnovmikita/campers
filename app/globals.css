@@ -36,13 +36,15 @@ ul{
 }
 
 .container{
-  width: 1440px;
+    width: 1440px;
     display: flex;
-    justify-content: start;
     align-items: center;
     margin: 0 auto;
     padding: 24px 64px;
 }
 button{
   all: unset;
+}
+legend,fieldset {
+  all: unset;         /* сброс всех браузерных стилей */
 }

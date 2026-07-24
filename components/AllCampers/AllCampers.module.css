@@ -1,19 +1,29 @@
 .wrapper{
-    padding: 24px;
     display: flex;
-
     border-radius: 16px;
-    width: 888px;
-    height: 312px;
+    height: 264px;
     gap: 24px;
 }
 .section{
-    width: 1440px;
+display: flex;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapperList{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .MainWrapper{
     display: flex;
+    width: 888px;
     flex-direction: column;
     gap: 32px;
+    padding: 0px 24px;
 }
 .coverImage{
 border-radius: 16px;
@@ -52,7 +62,6 @@ color: #475467;
     align-items: center;
     text-align: center;
     gap: 8px;
-    margin-bottom: 24px;
 }
 .afterDescrText{
     display: flex;
@@ -63,18 +72,34 @@ color: #475467;
 font-size: 16px;
 line-height: 1.5;
 color: #101828;
+text-transform: capitalize;
     
 }
 .button{
-    border-radius: 200px;
-padding: 16px 60px;
+border-radius: 200px;
+padding: 16px 42px;
+width: 173px;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
+margin-top: 24px;
 letter-spacing: -0.01em;
 color: #fff;
 background: #829b91;
 }
 .icon{
     margin-right: 8px;
+}
+.loadMore{
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.01em;
+color: #101828;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 16px 32px;
+margin-top: 40px;
 }
