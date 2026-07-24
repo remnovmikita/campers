@@ -10,8 +10,19 @@ import Link from "next/link";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { getAllCampers } from "@/lib/api/api";
 import { FormValues } from "../FilterComponents/FilterComponents";
+import NotFoundSerch from "../NotFoundSearch/NotFoundSearch";
+import Loader from "@/app/loader";
+import { toast } from "react-toastify";
 
-export default function AllCampers({ filters }: { filters: FormValues }) {
+export default function AllCampers({
+  filters,
+  onViewAll,
+  onClearFilters,
+}: {
+  filters: FormValues;
+  onViewAll: () => void;
+  onClearFilters: () => void;
+}) {
   const {
     data,
     fetchNextPage,
@@ -47,9 +58,12 @@ export default function AllCampers({ filters }: { filters: FormValues }) {
     <section className={css.section}>
       <div className={css.wrapperList}>
         <ul className={css.MainWrapper}>
-          {isLoading && <p>Loading data please wait</p>}
-          {isError && <p>Error Message</p>}
-          {showNoResult && <p>No campers found. Try another search</p>}
+          {isLoading && <Loader />}
+          {isError && toast.error("Oppps Error!!")}
+          {showNoResult && <NotFoundSerch
+              viewAllClick={onViewAll}
+              clearClick={onClearFilters}
+            />}
           {hasCampers &&
             campers.map((info) => (
               <li key={info.id} className={css.wrapper}>
@@ -59,6 +73,7 @@ export default function AllCampers({ filters }: { filters: FormValues }) {
                   width={219}
                   height={240}
                   alt={info.name}
+                  loading="eager"
                 />
                 <div className={css.cardContent}>
                   <div className={css.wrapperMainInfo}>
@@ -112,7 +127,7 @@ export default function AllCampers({ filters }: { filters: FormValues }) {
                         .replace(/\b\w/g, (c) => c.toUpperCase())}
                     </p>
                   </div>
-                  <Link href={`/catalog/${info.id}`} className={css.button}>
+                  <Link href={`/catalog/${info.id}`} target="_black" className={css.button}>
                     Show more
                   </Link>
                 </div>
@@ -120,18 +135,20 @@ export default function AllCampers({ filters }: { filters: FormValues }) {
             ))}
         </ul>
 
-        <button
-          className={css.loadMore}
-          type="button"
-          disabled={isFetching || !hasNextPage}
-          onClick={() => fetchNextPage()}
-        >
-          {isFetchingNextPage
-            ? "Loading more..."
-            : hasNextPage
-              ? "Load more"
-              : "Nothing more load"}
-        </button>
+        {hasCampers && (
+          <button
+            className={css.loadMore}
+            type="button"
+            disabled={isFetching || !hasNextPage}
+            onClick={() => fetchNextPage()}
+          >
+            {isFetchingNextPage
+              ? "Loading more..."
+              : hasNextPage
+                ? "Load more"
+                : "Nothing more load"}
+          </button>
+        )}
       </div>
     </section>
   );

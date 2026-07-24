@@ -1,16 +1,19 @@
-.section{
-    margin-top: 48px;
-    padding: 0px 64px;
-    width: 1440px;
-    display: flex;
-    gap: 65px;
-    padding-bottom: 52px;
+.section {
+  padding-top: 48px;
+  width: 1440px;
+  display: flex;
+  gap: 65px;
+  margin: 0 auto;
+  padding: 0px 63px;
+  padding-top: 48px;
+  padding-bottom: 52px;
 }
-.sectionRevies{
-        margin-top: 48px;
-    padding: 0px 64px;
-    width: 1440px;
-    display: flex;
-    flex-direction: column;
-    gap: 88px;
+.sectionRevies {
+  margin-top: 48px;
+  width: 1440px;
+  display: flex;
+  padding: 64px;
+  margin: 0px auto;
+  flex-direction: column;
+  gap: 88px;
 }

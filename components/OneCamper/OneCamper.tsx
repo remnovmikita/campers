@@ -11,7 +11,7 @@ export default function OneCamper({ camper }: { camper: Camper }) {
   const [mainImage, setMainImage] = useState(camper.gallery[0].original);
 
   return (
-    <div className="container">
+    <div className="">
       <div className={css.wrapperGlobal}>
         <div className={css.mainPhoto}>
           <Image
@@ -65,7 +65,7 @@ export default function OneCamper({ camper }: { camper: Camper }) {
                 </li>
               ))}
             </ul>
-            <div className={css.divider}></div>
+  
               <table className={css.specs}>
                 <tbody>
                   <tr>

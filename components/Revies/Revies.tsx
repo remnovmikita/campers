@@ -6,6 +6,8 @@ import Image from "next/image";
 import css from "./Revies.module.css";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,12 +29,17 @@ const initialValues: FormValuesPost = {
 };
 
 export default function Revies({ reviews, camperId }: { reviews: DataReviews[]; camperId:string  }) {
-  const handleSubmit = (
+  const handleSubmit = async (
     values: FormValuesPost,
     formikHelper: FormikHelpers<FormValuesPost>,
   ) => {
-    postReqest(camperId, values);
+   try{
+     await postReqest(camperId, values);
     formikHelper.resetForm();
+    toast.success("You have successfully booked your camper!");
+   }catch{
+    toast.error("Ooops")
+   }
   };
 
   return (

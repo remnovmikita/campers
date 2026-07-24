@@ -78,8 +78,9 @@ margin-bottom: 16px;
 .detalisList{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
-.divider::after{
+.detalisList::after{
 content: "";
 border: 1px solid #dadde1;
 width: 602px;
@@ -98,7 +99,6 @@ padding: 12px 18px;
   border-collapse: separate;
   border-spacing: 0 8px;
   width: 100%;
-  max-width: 500px;
 }
 
 .specs .second{

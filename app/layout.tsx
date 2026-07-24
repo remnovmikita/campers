@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import 'normalize.css';
-
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import TanStackProvider from "@/components/TanstackProvider";
 
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"], // можно указать нужные веса
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -22,12 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
     <html lang="en">
       <body className={inter.className}>
         <TanStackProvider>
-        <Header />
-        {children}
+          <Header />
+          {children}
+          {/* вот здесь контейнер для тостов */}
+          <ToastContainer position="top-right" autoClose={3000} />
         </TanStackProvider>
       </body>
     </html>

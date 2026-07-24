@@ -8,14 +8,16 @@ import { useQuery } from "@tanstack/react-query";
 import { getFilterCampers } from "@/lib/api/api";
 
 export interface FormValues {
-  forms: "";
-  transmissions: "";
-  engines: "";
+  location: string
+  form: string;
+  transmission: string;
+  engine:string;
 }
 export const initValues: FormValues = {
-  forms: "",
-  transmissions: "",
-  engines: "",
+  location:"",
+  form: "",
+  transmission: "",
+  engine: "",
 };
 
 export default function Filter({
@@ -40,14 +42,19 @@ export default function Filter({
         <Form className={css.form}>
           <fieldset className={css.location}>
             <legend>Location</legend>
+            <div className={css.location}>
             <label htmlFor="">
               <Image src={Map} alt="map" className={css.map} width={20} height={20} />
             </label>
-            <Field as="select" name="location" id="location">
-              <option value="Kyiv">Kyiv</option>
-              <option value="Lviv">Lviv</option>
-              <option value="Kharkov">Kharkov</option>
+            <Field as="select" className={css.select}  name="location" id="location">
+              <option value="">City</option>
+              <option value="Odesa">Odesa, Ukraine</option>
+              <option value="Dnipro">Dnipro, Ukraine</option>
+              <option value="Kyiv">Kyiv, Ukraine</option>
+              <option value="Lviv">Lviv, Ukraine</option>
+              <option value="Kharkov">Kharkov, Ukraine</option>
             </Field>
+            </div>
           </fieldset>
             {isLoading && <p>Loading ....</p>}
             <p>Filters</p>
@@ -55,7 +62,7 @@ export default function Filter({
             <legend>Camper form</legend>
             {data?.forms?.map((form: string) => (
               <label key={form} htmlFor={form}>
-                <Field type="radio" name="forms" id={form} value={form} />
+                <Field type="radio" name="form" id={form} value={form} />
                 {form
                   .replace(/_/g, " ")
                   .replace(/\b\w/g, (c) => c.toUpperCase())}
@@ -67,7 +74,7 @@ export default function Filter({
             <legend>Engine</legend>
             {data?.engines?.map((engine: string) => (
               <label key={engine} htmlFor={engine}>
-                <Field type="radio" name="engines" id={engine} value={engine} />
+                <Field type="radio" name="engine" id={engine} value={engine} />
                 {engine.charAt(0).toUpperCase() + engine.slice(1)}
               </label>
             ))}
@@ -79,7 +86,7 @@ export default function Filter({
               <label key={trans} htmlFor={trans}>
                 <Field
                   type="radio"
-                  name="transmissions"
+                  name="transmission"
                   id={trans}
                   value={trans}
                 />
