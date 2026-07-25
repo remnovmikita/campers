@@ -20,6 +20,7 @@ export const initValues: FormValues = {
   engine: "",
 };
 
+
 export default function Filter({
   onSubmit,
 }: {
@@ -43,7 +44,7 @@ export default function Filter({
           <fieldset className={css.location}>
             <legend>Location</legend>
             <div className={css.location}>
-            <label htmlFor="">
+            <label htmlFor="map">
               <Image src={Map} alt="map" className={css.map} width={20} height={20} />
             </label>
             <Field as="select" className={css.select}  name="location" id="location">
@@ -98,7 +99,7 @@ export default function Filter({
           <button type="submit" className={css.button}>
             Search
           </button>
-          <button type="reset" className={css.clear}>
+          <button type="reset" className={css.clear} id="clear">
             <Image
               src={Clear}
               onClick={() => clearForm}

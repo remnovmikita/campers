@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚐 Camper Catalog
 
-## Getting Started
+A **Next.js 14** project built with **React**, **Formik**, **TanStack Query**, and an **Express API**.  
+The app allows users to filter and browse a catalog of campers, reset filters, and view detailed camper information.
 
-First, run the development server:
+---
+
+## 📦 Tech Stack
+
+- **Next.js (App Router)** — frontend and routing
+- **React / TypeScript** — components and type safety
+- **Formik** — form handling and validation
+- **TanStack Query** — API data fetching and caching
+- **CSS Modules** — styling
+- **React Toastify** — notifications
+- **Next/Image** — image optimization
+
+---
+
+## ⚙️ Installation & Setup
 
 ```bash
+# Clone repository
+git clone https://github.com/your-repo/camper-catalog.git
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Camper filtering by multiple parameters
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Reset filters and view all campers
 
-## Learn More
+Infinite pagination with data loading
 
-To learn more about Next.js, take a look at the following resources:
+Error handling and loading states
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+UI with icons and SVG assets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📌 TODO / Improvements
 
-## Deploy on Vercel
+Add server-side validation for filters
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Implement favorites (save campers)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add authentication and user dashboard
+
+Improve mobile responsiveness and UI polish
+
+
+Developed by Mykyta — frontend development

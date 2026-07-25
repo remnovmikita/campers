@@ -5,11 +5,15 @@ import Clear from "@/public/Clear.svg";
 
 export default function NotFoundSerch({
   viewAllClick,
-  clearClick,
+
 }: {
   viewAllClick: () => void;
-  clearClick: () => void;
+
 }) {
+  const handleClear = () => {
+  const btn = document.querySelector<HTMLButtonElement>("#clear");
+  btn?.click();
+};
   return (
     <div className={css.wrapperNotFound}>
       <Image
@@ -25,7 +29,7 @@ export default function NotFoundSerch({
         search or clearing some filters.
       </p>
       <div className={css.wrapperButton}>
-        <button type="reset" onClick={clearClick} className={css.clear}>
+        <button type="reset" onClick={handleClear} className={css.clear}>
           <Image
             src={Clear}
             className={css.iconClear}

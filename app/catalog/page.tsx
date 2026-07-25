@@ -23,7 +23,6 @@ export default function Catalog() {
       <AllCampers
         filters={filters}
         onViewAll={viewAllCampers}   
-        onClearFilters={clearFilters}
       />
     </section>
   );

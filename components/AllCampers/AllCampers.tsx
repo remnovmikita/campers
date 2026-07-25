@@ -17,11 +17,9 @@ import { toast } from "react-toastify";
 export default function AllCampers({
   filters,
   onViewAll,
-  onClearFilters,
 }: {
   filters: FormValues;
   onViewAll: () => void;
-  onClearFilters: () => void;
 }) {
   const {
     data,
@@ -62,7 +60,6 @@ export default function AllCampers({
           {isError && toast.error("Oppps Error!!")}
           {showNoResult && <NotFoundSerch
               viewAllClick={onViewAll}
-              clearClick={onClearFilters}
             />}
           {hasCampers &&
             campers.map((info) => (
